@@ -27,50 +27,50 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESTINATION TIME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJj-oG-KHX">
-                                <rect key="frame" x="112" y="84" width="151.5" height="20.5"/>
+                                <rect key="frame" x="112" y="84" width="152" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAN 01 2000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9G3-Jw-nUV">
-                                <rect key="frame" x="98.5" y="112.5" width="180" height="36.5"/>
+                                <rect key="frame" x="98" y="113" width="180" height="37"/>
                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="40"/>
                                 <color key="textColor" red="0.73275446891784668" green="0.10177254676818848" blue="0.12627649307250977" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRESENT TIME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ra1-XG-iip">
-                                <rect key="frame" x="129.5" y="164" width="117" height="21"/>
+                                <rect key="frame" x="130" y="165" width="117" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAN 01 2000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiU-OL-hly">
-                                <rect key="frame" x="98" y="193" width="180" height="36.5"/>
+                                <rect key="frame" x="98" y="194" width="180" height="37"/>
                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST TIME DEPARTED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dp5-qq-gfL">
-                                <rect key="frame" x="101" y="255" width="174" height="21"/>
+                                <rect key="frame" x="101" y="256" width="174" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPEED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mex-cz-eR6">
-                                <rect key="frame" x="162" y="337" width="52.5" height="20.5"/>
+                                <rect key="frame" x="162" y="338" width="53" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhX-Py-ivE">
-                                <rect key="frame" x="106" y="426" width="167" height="30"/>
+                                <rect key="frame" x="106" y="427" width="167" height="30"/>
                                 <state key="normal" title="SET DESTINATION TIME"/>
                                 <connections>
                                     <segue destination="bBv-ya-q7Q" kind="show" identifier="ShowDestinationDatePickerSegue" id="6VT-u3-m73"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMB-3T-L8G">
-                                <rect key="frame" x="98" y="284" width="180" height="36.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMB-3T-L8G">
+                                <rect key="frame" x="188" y="285.5" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="40"/>
                                 <color key="textColor" red="0.73275446889999996" green="0.1017725468" blue="0.1262764931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -83,7 +83,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAN 01 2000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blK-Gn-cAe">
-                                <rect key="frame" x="98" y="328.5" width="180" height="36.5"/>
+                                <rect key="frame" x="98" y="330" width="180" height="37"/>
                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="40"/>
                                 <color key="textColor" red="0.73275446889999996" green="0.1017725468" blue="0.1262764931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -103,7 +103,7 @@
                             <constraint firstItem="Mex-cz-eR6" firstAttribute="top" secondItem="Dp5-qq-gfL" secondAttribute="bottom" constant="61" id="YaL-zh-oBT"/>
                             <constraint firstItem="Dp5-qq-gfL" firstAttribute="top" secondItem="ra1-XG-iip" secondAttribute="bottom" constant="70" id="b0m-CX-sWR"/>
                             <constraint firstItem="ra1-XG-iip" firstAttribute="centerX" secondItem="FJj-oG-KHX" secondAttribute="centerX" id="czO-9o-hUZ"/>
-                            <constraint firstItem="E5P-D8-5U6" firstAttribute="top" secondItem="mhX-Py-ivE" secondAttribute="bottom" constant="36" id="f9y-eT-TJH"/>
+                            <constraint firstItem="E5P-D8-5U6" firstAttribute="top" secondItem="mhX-Py-ivE" secondAttribute="bottom" constant="35" id="f9y-eT-TJH"/>
                             <constraint firstItem="E5P-D8-5U6" firstAttribute="leading" secondItem="mhX-Py-ivE" secondAttribute="trailing" constant="-131" id="hPl-Pr-czy"/>
                             <constraint firstItem="blK-Gn-cAe" firstAttribute="centerX" secondItem="vMB-3T-L8G" secondAttribute="centerX" id="iRm-GT-7lv"/>
                             <constraint firstItem="mhX-Py-ivE" firstAttribute="leading" secondItem="FJj-oG-KHX" secondAttribute="trailing" constant="-157.5" id="rHI-6r-4aA"/>
