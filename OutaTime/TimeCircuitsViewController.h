@@ -10,21 +10,21 @@
 
 @protocol TimeCircuitsDatePickerDelegate
 
+//- (void)dateValuePicked:(NSInteger)dateValue;
+- (void)destinationDateWasChosen:(NSDate *)destinationDate;
+
 @end
 
-@interface TimeCircuitsViewController () <UIPickerViewDataSource,UIPickerViewDelegate>
+@interface TimeCircuitsViewController : UIViewController
 
-
-- (void)destinationDateWasChosen:(NSDate *)destinationDate;
 
 @end
 //
 // 9. The TimeCircuitsViewController needs to implement the delegate protocol to receive the destination date from the picker
 //    view. The way to declare a class as a delegate is to put the name of the delegate in between <>. It goes after the
-//    superclass declaration (UIViewController below) (h- replaced with () <UIPickerViewDataSource,UIPickerViewDelegate> after @interface TimeCircuitsViewController.)
+//    superclass declaration (UIViewController below) (h- added TimeCircuitsDatePickerDelegate to interface line in TCVC.m file but Ben said it could be put in this file.)
 //
 
 
 //@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 
-//@implementation TimeCircuitsViewController

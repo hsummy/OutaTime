@@ -9,7 +9,7 @@
 #import "TimeCircuitsViewController.h"
 #import "DatePickerViewController.h"
 
-@interface TimeCircuitsViewController ()
+@interface TimeCircuitsViewController () <TimeCircuitsDatePickerDelegate>
 
 //
 // 1. We need three properties to hold various info.
@@ -78,7 +78,7 @@
     //
     // 7. The speedLabel should be set to "% MPH", with the % being the current speed
     //
-    self.speedLabel.text = @"% MPH";
+    self.speedLabel.text = [NSString stringWithFormat: @"%ld MPH", (long) self.currentSpeedValue];
     
     //
     // 8. The lastTimeDeparted label needs to be set to "--- -- ----"
@@ -101,10 +101,11 @@
     {
         DatePickerViewController *timePickerVC = (DatePickerViewController *)[segue destinationViewController];
         //
-        // 10. This view controller needs to be set as the time picker view controller's delegate object.
+        // 10. This view controller needs to be set as the time picker view controller's delegate object. (h-added above View Controller called timePickerVC and assigned to delegate object to make it 'this' VC called self.)
         //
-        
+        timePickerVC.delegate = self;
     }
+    
 }
 
 #pragma mark - TimeCircuitsDatePickerDelegate
@@ -113,7 +114,7 @@
 {
     //
     // 12. The destinationTimeLabel needs to be set to the destination date using our date formatter object
-    //
+    self.destinationTimeLabel.text = [self.timeCircuitsValue stringFromDate:destinationDate];
     
 }
 
@@ -123,20 +124,8 @@
 {
     //
     // 13. This is where we will start counting the speedometer up to 88 MPH. We need to use the timer object to do that. Is
-    //    there a method defined that will allow us to get the timer started?
-    
-    if (!self.timer)
-    {
-        
-        self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerFired) userInfo:nil repeats:YES];
-
-}
-- (IBAction)setDestination:(UIButton *)sender
-{
-    //
-    // 13. This is where we will start counting the speedometer up to 88 MPH. We need to use the timer object to do that. Is
-    //    there a method defined that will allow us to get the timer started?
-    //
+    //    there a method defined that will allow us to get the timer started? (H- resets the Travel Back button)
+    [self startTimer];
     
 }
 
@@ -148,7 +137,7 @@
     // 14. We need to check that the timer object isn't running, and the best way to do that is just to check if the timer
     //    object has been instantiated, or in this case, NOT instantiated.
     //
-    if (<#How do you determine whether to start the timer?#>)
+    if (!self.timer)
     {
         //
         // 15. Below is an example of a timer being instantiated with a particular interval and firing a particular
@@ -161,12 +150,14 @@
 //                                                         selector:@selector(updateSpeed)
 //                                                         userInfo:nil
 //                                                          repeats:YES];
-        
+           self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateSpeed) userInfo:nil repeats:YES];
     }
 }
 
 - (void)stopTimer
-{
+    {
+        
+    }
     //
     // 16. We need to stop the timer object here. The method to call is called "invalidate".
     //    Once it's stopped, we want to nil out the object so we can create a new one when the user asks to travel back
@@ -174,40 +165,41 @@
     //
 
     
-}
 
 - (void)updateSpeed
 {
     //
-    // 17. We need to check if the current speed variable is set to 88 yet.
+    // 17. We need to check if the current speed variable is set to 88 yet. (h- not means !=)
     //
-    if (<#How do you check the speed?#>)
+    if (self.currentSpeedValue != 88)
     {
         //
         // 18. If it's not yet set to 88, we want to increment the current speed variable by 1.
-        //
+        self.currentSpeedValue = self.currentSpeedValue +1;
         
         //
         // 19. Here we want to update the speed label to reflect the current speed.
-        //
+        self.speedLabel.text = [NSString stringWithFormat:@"%ld MPH", (long)self.currentSpeedValue];
     }
     else
     {
         //
         // 20. If the speed variable is at least 88, we want to stop the timer here.
-        //
+        [self.timer invalidate];
+        self.timer = nil;
 
         //
-        // 21. Then we need to update the lastTimeDepartedLabel with the value of the presentTimeLabel.
-        //
+        // 21. Then we need to update the lastTimeDepartedLabel with the value of the presentTimeLabel. (H-WHEN WOULD YOU NOT PUT IN .TEXT BELOW?)
+        self.lastTimeDepartedLabel.text = self.presentTimeLabel.text;
 
         //
         // 22. The presentTimeLabel needs to take the value of the destinationTimeLabel here.
-        //
+        self.presentTimeLabel.text = self.destinationTimeLabel.text;
         
         //
         // 23. Lastly, we need to reset the current speed label to 0 here.
-        //
+        //self.speedTimer = 0
+        self.currentSpeedValue = 0;
         
     }
 }
